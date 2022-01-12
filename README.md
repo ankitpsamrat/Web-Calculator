@@ -1,2 +1,2 @@
-# calculator.github.io
+# Web-Calculator
 Web Calculator
