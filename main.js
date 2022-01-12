@@ -35,14 +35,13 @@ function getFormattedNumber(num) {
     return value;
 }
 function reverseNumberFormat(num) {
-    return Number(num.replace(/,/g, '')); //Give comma seperated value
+    return Number(num.replace(/,/g, '')); //give comma seperated value
 }
 
 let operator = document.getElementsByClassName("operator");
 for (let i = 0; i < operator.length; i++) {
     operator[i].addEventListener('click', function () {
-        if (this.id == "clear") {
-            //this.id gives the current html element id
+        if (this.id == "clear") { //this.id gives the current html element id
             printHistory("");
             printOutput("");
         }
@@ -88,12 +87,9 @@ let number = document.getElementsByClassName('number');
 for (let i = 0; i < number.length; i++) {
     number[i].addEventListener('click', function () {
         let output = reverseNumberFormat(getOutput());
-        //if output is a number
-        if (output != NaN) {
+        if (output != NaN) { //if output is a number
             output = output + this.id;
             printOutput(output);
         }
     })
 }
-
-
